@@ -1,15 +1,15 @@
-import UpdateItem from "./components/UpdateItem";
+import React from 'react';
+import UpdateItem from './components/UpdateItem';
 
-// use the following link to get the data
-// `/doors` will give you all the doors, to get a specific door use `/doors/1`.
-const API_URI = `http://${import.meta.env.VITE_API_URI}/doors`;
+const API_URI = 'http://localhost:3000/items/1'; // Make sure this matches your db.json
 
 function App() {
-  // Get the existing item from the server
-  // const [item, setItem] = useState(null);
-  // pass the item to UpdateItem as a prop
-
-  return <UpdateItem />;
+  return (
+    <div>
+      <h1>React Update Item App</h1>
+      <UpdateItem />
+    </div>
+  );
 }
 
 export default App;
